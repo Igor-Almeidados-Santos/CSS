@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body{
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul{
+            padding: 0;
+        }
+
+        div{background-color: dodgerblue;}
+        span{background-color: seagreen;}
+        li{background-color: purple;}
+
+        div, span, li{
+            width: 50%;/*Unidade percentual*/
+            width: 200px;/*unidade relativa*/
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            display: block;/*Todos os elementos com este display ocupam uma linha cada*/
+            display: inline;/*Todos os elementos com este display ocupam a mesma linha (não considera a mudança de alguns estilos como altura e largura)*/
+            display: inline-block;/*Todos os elementos com este display ocupam a mesma linha (considera a mudança de alguns estilos como altura e largura)*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>
