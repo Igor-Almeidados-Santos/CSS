@@ -11,18 +11,32 @@
 
         .c1 {
             background-color: red;
+            float: right;
         }
 
         .c2 {
             background-color: green;
+            clear: right;/*limpa a flutuação do elemento com float right e não fica na mesma linha que este elemento.*/
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            clear: left;
+            float: right;
         }
 
         .c4 {
             background-color: orange;
+            clear: right;
+            float: left;
+        }
+
+        div{
+            height: 150px;
+            width: 150px;
+
+            float: right;/*Os elementos flutuam para o lado informado do primeiro para o ultimo.*/          
         }
     </style>
 </head>
