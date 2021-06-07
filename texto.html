@@ -16,6 +16,73 @@
             flex-direction: column;
             align-items: center;
         }
+
+        p{
+            /*valores padrões de tamanho da fonte - usam o valor padrão de tamanho setado*/
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* unidades absolutas */
+            font-size: 100px;/*tamanho do pixel é relativo a densidade da tela*/
+            font-size: 72pt;/*pontos - igual a 1 polegada*/
+            font-size: 1in;/*polegada*/
+
+            /* unidades relativas */
+            font-size: 2.2em;/*usa o tamanho de fonte do elemento mais próximo*/
+            font-size: 2.2rem;/*usa o tamanho de fonte do elemento root(html)*/
+            font-size: 10vw;/*tamanho da largura da viewport*/
+            font-size: 10vh;/*tamanho da largura da viewport*/
+
+            /* familia de fontes */
+            font-family: monospace;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            /* peso da fonte */
+            font-weight: 100;
+            font-weight: bold;
+
+            /*estilo da fonte*/
+            font-style: italic;
+
+            /* transformação do texto */
+            text-transform: uppercase;
+            text-transform: lowercase;
+            text-transform: capitalize;
+
+            /* decoração do texto */
+            text-decoration: overline;
+            text-decoration: underline;
+            text-decoration: line-through;
+
+            /* espaçamento */
+            word-spacing: 10px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+
+            /* alinhamento do texto */
+            align-items: center;
+        }
+
+        .botao{
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque{
+            color: #fff;
+            background-color: crimson;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active{
+            box-shadow: none;
+        }
     </style>
 </head>
 
