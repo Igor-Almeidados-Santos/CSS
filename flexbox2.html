@@ -6,7 +6,37 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div{
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div{
+            box-sizing: border-box;
+        }
+
+        .flex-container{
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3){
+            background-color: firebrick;
+            order: 1;/*manipula a ordem do elemento elementos com ordem maior são exibidos por ultimo os itens tem ordem 0*/
+            align-self: center;/*alinha o item de acordo com o informado*/
+            flex-grow: 2;
+        }
+
+        .flex-container div{
+            width: 100px;
+            flex-grow: 1;/*distribui a quantidade de pixel restante para cada flex item de acordo com seus respectivos pesos se o peso de um flex item for maior ele recebe mais pixeis que os outros.*/
+        }
+
+        .flex-container{
+            width: 300px;
+            flex-shrink: 1;/*encolhe os itens de acordo com seus pesos.*/ 
+        }
     </style>
 </head>
 

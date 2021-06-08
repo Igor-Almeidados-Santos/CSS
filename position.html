@@ -5,7 +5,62 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static{/*não leva em consideração as direções */
+            top: 100px;
+            left: 100px;
+            background-color: cornflowerblue;
+        }
+
+        .fixed{/*mantém o elemento fixo na página e leva em consideração as direções*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1{/*se posiciona de acordo com os elementos ao seu redor*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+        }
+
+        .absolute1{/*se posiciona absoluto na página independente de já haver um elemento naquela posição.*/
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2{
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+
+        .absolute2{/*Como este elemento está dentro de outro com um position relative ele se posiciona absoluto dentro deste elemento. No momento que o elemento em que ele está se torne fixed ele se posiciona em relação a página e não mais em relação ao seu elemento pai.*/
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: springgreen;
+        }
+
+        .sticky{
+            position: -webkit-sticky;/*Para usar o sticky no safari deve colocar este position também.*/
+            position: sticky;
+            background-color: #777;
+            top: 0px;
+        }
     </style>
 </head>
 

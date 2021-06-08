@@ -6,7 +6,47 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div{
+            border: solid 5px aquamarine;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big{
+            font-size: 1.5em;
+        }
+
+        .flex-container{
+            display: flex;
+            width: 50%;
+
+            /* direção */
+            flex-direction: column;/*modifica o main axis para column (por padrão o main axis é row)*/
+            flex-direction: row-reverse;/*inverte a posição dos elementos em linha*/
+            flex-direction: column-reverse;/*inverte a posição dos elementos em coluna*/
+
+            /* quebra de linha */
+            flex-wrap: wrap;/*Quando acaba o espaço da linha os elementos quebram para a próxima linha*/
+            flex-wrap: wrap-reverse;/*Quando acaba o espaço da linha a linha já preenchida quebra para a próxima e a primeira linha fica com os novos elementos.*/
+
+            /* direção e quebra */
+            flex-flow: row wrap;/*linha e quebra*/
+
+            /*alinhamento no main axis*/
+            justify-content: flex-start /*flex-end e center*/;/*justifica os flex items no inicio fim ou centro*/
+            justify-content: space-around/*space-between*/;/*justifica os flex items com espaços ao redor deles ou entre eles*/
+
+            /* alinhamento no cross axis */
+            align-items: stretch;/*padrão*/
+            align-items: baseline;/*alinha pela linha de base das fontes*/
+            align-items: flex-start;/*alinha no inicio do flex item*/
+            align-items: flex-end;/*alinha no final do flex item*/
+            align-items: center;/*alinha no centro */
+
+            /*alinhamento de mais de uma linha*/
+            align-content: flex-start/*flex-end, center*/;/*alinha todas as linhas no começo fim ou centro do flexbox*/
+            align-content: space-around/*space-between*//*flex-end, center*/;/*alinha todas as linhas com espaços ao redor o entre eles*/
+        }
     </style>
 </head>
 
