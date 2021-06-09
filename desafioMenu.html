@@ -7,7 +7,73 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            
+        }
+
+        html{
+            font-family: 'Oswald', sans-serif;
+            font-size: 10px;
+        }
+
+        header{
+            display: flex;
+            background-color: blueviolet;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: solid 5px deeppink;
+        }
+
+        header .logo{
+            margin: 10px 15px;
+        }
+
+        header .logo img{
+            width: 23rem;
+        }
+
+        header .menu-toggle{
+            background: rgba(255, 0, 0, .3);
+            color: whitesmoke;
+
+            padding: 10px 20px;
+            margin-right: 15px;
+
+            border: solid 1px rgba(255, 0, 0, .4);
+            border-radius: 15%;
+            box-shadow: 3px 2px 5px 0px rgb(172, 4, 4);
+        }
+
+        header .menu-toggle:active{
+            box-shadow: none;
+            font-size: .9rem;
+        }
+
+        header .menu,
+        .autenticacao{
+            display: none;
+        }
+
+        @media (min-width: 700px) {
+            header .menu-toggle{
+                display: none;
+            }
+
+            header .menu{
+                display: initial;
+                background-color: aliceblue;   
+            }
+
+            header .menu ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;   
+            }
+        }
     </style>
 </head>
 
@@ -44,7 +110,7 @@
     </header>
 
     <script>
-        // ...
+        
     </script>
 </body>
 
