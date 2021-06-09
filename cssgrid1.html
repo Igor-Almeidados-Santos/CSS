@@ -22,6 +22,47 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body{
+            display: grid;
+
+            /* colunas */
+            grid-template-columns: 50% 50%;/*Define a organização das colunas do css grid*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);/*A função repeat pega a quantidade valores definidos com porcentagens e multiplica pelo primeiro valor informado (3 * 4 = 12) e adiciona a quantidade total em colunas.*/
+            grid-template-columns: repeat(4, 8.33%);
+            grid-template-columns: repeat(11, 100px) 100px;
+            grid-template-columns: 200px 20% 1fr;/*fr a coluna referente ocupa todo o espaço restante da largura*/
+
+            /* linhas  */
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr;/*para as linhas que não foram definidos os valores ocupam apenas o espaço de renderização do conteúdo de cada linha*/
+            grid-template-rows: 100px auto auto auto;/*O auto divide de forma igual o restante das linhas*/
+        }
+
+        .d8{
+            /*inicio e fim da coluna*/
+            grid-column-start: 2;/*começo da coluna*/
+            grid-column-end: 4;/*final da coluna*/
+            grid-column-end: span 2;/*mesmo resultado de antes*/
+
+            /* inicio e fim da linha */
+            grid-row-start: 3;/*começo da linha*/
+            grid-row-end: 5;/*final da linha*/
+            grid-row-end: span 2;/*mesmo resultado de antes*/
+        }
+
+        .d10,
+        .d11{/*CUIDADO! sobreposição de itens 10 e 11 ocupando o mesmo espaço.*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10{
+            z-index: 10;/*Muda a sobreposição dos itens quanto maior o número do z index maior a preferência do item a ficar a frente de outros.*/
+        }
     </style>
 </head>
 
