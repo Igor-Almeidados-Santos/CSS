@@ -61,6 +61,10 @@
             font-size: .9rem;
         }
 
+        .linkAtivo{
+            background-color: maroon !important;
+        }
+
         header 
         .autenticacao{
             display: none;
@@ -94,12 +98,20 @@
             }
 
             header .menu ul li{
-                margin-right: 2.6rem;
+                margin-right: 3px;
             }
 
             header .menu ul li a{
                 font-size: 2.0rem;
                 color: #fff;
+                padding: 15px;
+            }
+
+            header .menu ul li a:hover,
+            .menu ul li a.selected{
+                background-color: rgb(127, 12, 150);
+                border: solid 3px deeppink;
+                color: lavender;
             }
         }
 
@@ -140,6 +152,10 @@
             background-color: darkorchid;
         }
 
+        .active{
+            display: initial !important;
+        }
+
         header .menu ul{
             display: flex;
             flex-direction: column;
@@ -175,13 +191,13 @@
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
-        <button class="menu-toggle">
+        <a class="menu-toggle">
             <i class="fa fa-lg fa-bars"></i>
-        </button>
+        </a>
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a href="#inicio" >Início</a>
                 </li>
                 <li>
                     <a href="#cursos">Cursos</a>
@@ -202,14 +218,13 @@
 
     <script>
         const botao = document.querySelector('.menu-toggle');
+        const links = document.querySelectorAll('nav a');
 
         botao.addEventListener('click', () => {
             let menu = document.querySelector('.menu');
-            if(menu.style.display == 'none'){
-                menu.style.display = 'initial';
-            }
-
+            menu.classList.toggle('active');      
         });
+
     </script>
 </body>
 
